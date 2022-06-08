@@ -47,3 +47,11 @@ stages:
               echo $(numeSpartan)
               echo ${{ parameters.numeDacic }}
             displayName: 'Run a one-line script'
+          
+          - script:
+              echo ${{ parameters.numeDacic }}>fisier.txt
+            displayName: 'Write file'
+          
+          - publish: fisier.txt
+            name: guru
+            displayName: Bau bau
