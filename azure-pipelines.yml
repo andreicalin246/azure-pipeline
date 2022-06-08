@@ -37,3 +37,8 @@ stages:
         steps:
           - script: echo Hello, world!
             displayName: 'Run a one-line script'
+            
+          - script: |
+              echo Nume spartani!
+              echo $(numeSpartan)
+            displayName: 'Run a one-line script'
