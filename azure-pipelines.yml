@@ -15,7 +15,7 @@ stages:
     displayName: My first stage
     jobs:
       - job:
-        displayName: My frist job
+        displayName: My first job
         steps:
           - script: echo Hello, world!
             displayName: 'Run a one-line script'
@@ -29,7 +29,7 @@ stages:
     displayName: My second stage
     jobs:
       - job:
-        displayName: My frist job
+        displayName: My first job
         steps:
           - script: echo Hello, world!
             displayName: 'Run a one-line script'
