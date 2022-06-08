@@ -6,6 +6,10 @@
 trigger:
 - main
 
+variables:
+- name: numeSpartan
+  value: Vlad
+
 pool:
   vmImage: ubuntu-latest
 
