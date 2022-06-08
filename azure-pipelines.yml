@@ -10,6 +10,9 @@ variables:
 - name: numeSpartan
   value: Vlad
 
+parameters:
+  - name: numeDacic
+
 pool:
   vmImage: ubuntu-latest
 
@@ -41,4 +44,5 @@ stages:
           - script: |
               echo Nume spartani!
               echo $(numeSpartan)
+              echo $(numeDacic)
             displayName: 'Run a one-line script'
