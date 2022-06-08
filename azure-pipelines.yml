@@ -12,6 +12,7 @@ variables:
 
 parameters:
   - name: numeDacic
+    displayName: 'Nume:'
 
 pool:
   vmImage: ubuntu-latest
@@ -44,5 +45,5 @@ stages:
           - script: |
               echo Nume spartani!
               echo $(numeSpartan)
-              echo $(numeDacic)
+              echo ${{ parameters.numeDacic }}
             displayName: 'Run a one-line script'
