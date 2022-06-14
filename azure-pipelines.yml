@@ -56,11 +56,25 @@ stages:
             name: guru
             displayName: Bau bau
       - job:
-        displayName: Build C# programm
+        displayName: Build C# program
         steps:
           - script: |
-              dotnet build SimpleApp/SimpleApp/SimpleApp.csproj -r win10-x64
+              dotnet build CSharp/SimpleApp.csproj -r win10-x64
+            workingDirectory: CSharp
 
-          - publish: SimpleApp/SimpleApp/bin/Debug/net6.0
+          - publish: CSharp/SimpleApp/bin/Debug/net6.0
             name: CSharp
             displayName: CSharp Simple App Build 
+
+      - job:
+        displayName: Javascript program
+        steps: 
+          - script: |
+              npm install
+              npm test
+            workingDirectory: Javascript
+
+          - publish: Javascript/mocha
+            name: Javascript
+            displayName: Javascript Mocha Unit tests
+           
