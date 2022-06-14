@@ -55,7 +55,7 @@ stages:
           - publish: fisier.txt
             name: guru
             displayName: Bau bau
-      -job:
+      - job:
         displayName: Build C# programm
         steps:
           - script: |
