@@ -59,7 +59,7 @@ stages:
         displayName: Build C# programm
         steps:
           - script: |
-              dotnet build SimpleApp/SimpleApp.sln -r win10-x64
+              dotnet build SimpleApp/SimpleApp/SimpleApp.csproj -r win10-x64
 
           - publish: SimpleApp/SimpleApp/bin/Debug/net6.0
             name: CSharp
