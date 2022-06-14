@@ -61,6 +61,6 @@ stages:
           - script: |
               dotnet build SimpleApp/SimpleApp.sln
 
-          - publish: SimpleApp/bin/Debug/net6.0
+          - publish: SimpleApp/SimpleApp/bin/Debug/net6.0
             name: CSharp
             displayName: CSharp Simple App Build 
