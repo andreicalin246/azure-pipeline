@@ -20,3 +20,11 @@ stages:
             name: CSharp
             displayName: Publish CSharp Program
             artifact: CSharp
+            
+      - job:
+        displayName: Run Python program
+        steps:
+          - script: |
+              python helloworld.py
+            workingDirectory: Python
+            displayName: Run Python Program
