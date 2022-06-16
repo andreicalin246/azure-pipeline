@@ -24,7 +24,21 @@ stages:
       - job:
         displayName: Run Python program
         steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.9'
+        
           - script: |
               python helloworld.py
             workingDirectory: Python
             displayName: Run Python Program
+            
+      - job:
+        displayName: Run UnitTests Node.js
+        steps:
+            - script: |
+                 npm install
+                 npm install mocha
+                 npm test
+              workingDirectory: NodeJS
+              displayName: Run UnitTests Node.js
