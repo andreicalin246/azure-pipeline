@@ -16,7 +16,7 @@ stages:
             workingDirectory: CSharp
             displayName: Build CSharp Program
 
-          - publish: HelloWorld/bin/Debug/net6.0
+          - publish: CSharp/HelloWorld/bin/Debug/net6.0
             name: CSharp
             displayName: Publish CSharp Program
             artifact: CSharp
