@@ -1,0 +1,22 @@
+trigger:
+  -main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage:
+    displayName: Build programs
+    jobs:
+      - job:
+        displayName: Build CSharp program
+        steps:
+          - script: |
+              dotnet build
+            workingDirectory: CSharp
+            displayName: Build CSharp Program
+
+          - publish: HelloWorld/bin/Debug/net6.0
+            name: CSharp
+            displayName: Publish CSharp Program
+            artifact: CSharp
