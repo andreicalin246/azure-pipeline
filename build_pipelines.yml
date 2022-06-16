@@ -12,7 +12,7 @@ stages:
         displayName: Build CSharp program
         steps:
           - script: |
-              dotnet build HelloWorld/HelloWorld.csproj
+              dotnet build HelloWorld/HelloWorld.csproj -r win-x64
             workingDirectory: CSharp
             displayName: Build CSharp Program
 
